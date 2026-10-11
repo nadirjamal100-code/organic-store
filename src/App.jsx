@@ -521,7 +521,7 @@ export default function App() {
           </>
         )}
       </main>
-      <Footer />
+      <Footer onHomeOpen={openHome} />
     </>
   );
 }

@@ -4,14 +4,21 @@ import { footerColumns, socials } from '../data/content.js';
 // List widths from the Figma text boxes (they make "Contact us" wrap exactly as designed).
 const LIST_WIDTHS = [79, undefined, undefined];
 
-export default function Footer() {
+export default function Footer({ onHomeOpen }) {
   const { email, status, onChange, onSubmit } = useEmailForm();
 
   return (
     <footer className="site-footer container" id="contact">
       <div className="site-footer__top">
         <div className="site-footer__brand">
-          <a href="#top" aria-label="Organic — back to top">
+          <a
+            href="#top"
+            aria-label="Organic — back to top"
+            onClick={(event) => {
+              event.preventDefault();
+              onHomeOpen?.();
+            }}
+          >
             <img src="/images/logo-organic.svg" width="348" height="70" alt="Organic" loading="lazy" />
           </a>
           <ul className="socials">
