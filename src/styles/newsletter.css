@@ -1,0 +1,129 @@
+.newsletter {
+  position: relative;
+  min-height: 324px;
+  overflow: hidden;
+  background: #0a1b10;
+}
+.newsletter__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.newsletter__inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  width: min(1041px, 100% - 48px);
+  margin-inline: auto;
+  padding: 95px 0 60px;
+  color: #fff;
+}
+.newsletter__copy {
+  flex: 0 0 448px;
+}
+.newsletter__copy h2 {
+  font-family: var(--font-rounded);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+.newsletter__copy p {
+  margin-top: 7px;
+  font-family: var(--font-open);
+  font-size: 19px;
+  line-height: 2.25;
+  white-space: nowrap;
+}
+.newsletter__form {
+  position: relative;
+  flex: 1 1 523px;
+  min-width: 0;
+  max-width: 523px;
+}
+.newsletter__field {
+  position: relative;
+  display: block;
+  height: 56px;
+  border: 1px solid #ececec;
+  background: #fff;
+}
+.newsletter__field svg {
+  position: absolute;
+  top: 21px;
+  left: 20px;
+}
+.newsletter__field input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px 0 49px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-open);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.newsletter__field input::placeholder {
+  color: var(--text);
+  opacity: 1;
+}
+.newsletter__field input:focus-visible {
+  outline-offset: -3px;
+}
+.newsletter__submit {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-top: 14px;
+  border: 0;
+  background: var(--green);
+  color: #fff;
+  font-family: var(--font-open);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.newsletter__submit:hover {
+  filter: brightness(0.92);
+}
+.newsletter .form-status {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+}
+
+@media (max-width: 1023px) {
+  .newsletter__inner {
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px 0 56px;
+  }
+  .newsletter__copy {
+    flex-basis: auto;
+  }
+  .newsletter__form {
+    width: 100%;
+    max-width: none;
+  }
+}
+@media (max-width: 1279px) {
+  .newsletter__copy p {
+    white-space: normal;
+  }
+}
+@media (max-width: 767px) {
+  .newsletter__copy h2 {
+    font-size: 30px;
+  }
+  .newsletter__copy p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,121 @@
+.sale-page {
+  min-height: 55vh;
+  padding-top: 34px;
+  padding-bottom: 64px;
+}
+.sale-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.sale-page__breadcrumb a:hover {
+  color: var(--green);
+}
+.sale-page__hero {
+  padding: clamp(26px, 5vw, 58px);
+  border-radius: 16px;
+  background: linear-gradient(115deg, #edf8e8 0%, #f9fbf5 62%, #e7f2df 100%);
+  text-align: center;
+}
+.sale-page__tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 20px;
+  background: #fff;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sale-page__hero h1 {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.sale-page__hero p {
+  max-width: 580px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-family: var(--font-open);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.sale-page__products {
+  margin-top: 42px;
+}
+.sale-page__section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+.sale-page__section-heading h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.sale-page__section-heading p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.sale-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 30px 14px;
+}
+.sale-page__grid .product-card {
+  min-width: 0;
+}
+.sale-page__empty {
+  padding: 36px 20px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .sale-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .sale-page {
+    padding-top: 20px;
+    padding-bottom: 42px;
+  }
+  .sale-page__breadcrumb {
+    margin-bottom: 18px;
+  }
+  .sale-page__hero {
+    padding: 28px 18px;
+    border-radius: 12px;
+  }
+  .sale-page__hero h1 {
+    font-size: 30px;
+  }
+  .sale-page__hero p {
+    font-size: 14px;
+  }
+  .sale-page__products {
+    margin-top: 30px;
+  }
+  .sale-page__section-heading h2 {
+    font-size: 23px;
+  }
+  .sale-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 8px;
+  }
+  .sale-page__grid .product-card {
+    padding: 6px;
+  }
+}

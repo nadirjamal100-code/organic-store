@@ -1,0 +1,119 @@
+.articles .section-header {
+  min-height: 46px;
+}
+.articles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 52px;
+  margin-top: 20px;
+}
+.article-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  background: #fff;
+}
+.article-card__img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 0;
+}
+.article-card__content {
+  padding: 30px;
+}
+.article-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  color: #828282;
+  text-transform: capitalize;
+}
+.article-card__meta li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.article-card__title {
+  margin-top: 10px;
+  font-family: var(--font-inter);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-2);
+  text-transform: capitalize;
+}
+.article-card__title button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  text-transform: inherit;
+}
+.article-card__title button:hover {
+  color: var(--green);
+}
+.article-card__excerpt {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: var(--font-roboto);
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.article-card__read-more {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  border-bottom: 2px solid var(--ink);
+  border-radius: 0;
+  appearance: none;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.article-card__title a:hover,
+.article-card__read-more:hover,
+.link-underline--dark:hover {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+@media (max-width: 1023px) {
+  .articles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .articles__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .articles .section-header {
+    min-height: 0;
+  }
+  .article-card__content {
+    padding: 20px;
+  }
+  .article-card__title {
+    font-size: 19px;
+  }
+}
