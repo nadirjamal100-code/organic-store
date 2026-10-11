@@ -28,6 +28,8 @@ export default function ProductCard({ product, open, onOpen, shop, onProductOpen
     setAdded(true);
     window.setTimeout(() => setAdded(false), 1400);
   };
+  const buttonLabel = stock < 1 ? 'Out of stock' : added ? 'Added to cart' : 'Add to cart';
+  const compactButtonLabel = stock < 1 ? 'Unavailable' : added ? 'Added' : 'Add';
 
   return (
     <article
@@ -80,9 +82,10 @@ export default function ProductCard({ product, open, onOpen, shop, onProductOpen
           </button>
         </div>
         <div className="product-card__buttons">
-          <button type="button" className="add-btn" onClick={add} disabled={stock < 1}>
+          <button type="button" className="add-btn" onClick={add} disabled={stock < 1} aria-label={buttonLabel}>
             <Icon name="tdesign_cart-add" size={17} />
-            <span>{stock < 1 ? 'Out of stock' : added ? 'Added ✓' : 'Add to cart'}</span>
+            <span className="add-btn__label--full">{stock < 1 ? 'Out of stock' : added ? 'Added ✓' : 'Add to cart'}</span>
+            <span className="add-btn__label--compact" aria-hidden="true">{compactButtonLabel}</span>
           </button>
           <button
             type="button"

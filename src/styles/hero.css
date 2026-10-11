@@ -156,11 +156,20 @@
     margin-top: 28px;
   }
   .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
     margin-top: 16px;
   }
+  .hero__stats li {
+    flex-direction: column;
+    gap: 4px;
+  }
   .hero__stat-value {
-    font-size: 26px;
+    font-size: 22px;
+  }
+  .hero__stat-label {
+    font-size: 10px;
   }
   .hero__features {
     position: relative;

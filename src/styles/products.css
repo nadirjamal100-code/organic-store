@@ -282,6 +282,9 @@
   color: var(--ink);
   white-space: nowrap;
 }
+.add-btn__label--compact {
+  display: none;
+}
 .wish-btn {
   width: 50px;
 }
@@ -375,11 +378,24 @@
   }
   .product-card__price {
     flex-wrap: wrap;
+    gap: 4px;
     row-gap: 4px;
   }
+  .product-card__price del {
+    font-size: 13px;
+  }
+  .product-card__price ins {
+    font-size: 15px;
+  }
+  .product-card__discount {
+    height: 18px;
+    padding: 3px 5px;
+    font-size: 10px;
+    line-height: 12px;
+  }
   /* On touch layouts the extra controls sit in the flow instead of floating over the next row */
-  .product-card.is-open .product-card__surface {
-    opacity: 0;
+  .product-card__surface {
+    display: none;
   }
   .product-card__actions {
     position: static;
@@ -390,13 +406,25 @@
     gap: 10px;
     width: 100%;
   }
-  .add-btn span {
-    font-size: 12px;
+  .add-btn__label--full {
+    display: none;
+  }
+  .add-btn__label--compact {
+    display: inline;
+    font-size: 11px;
+    line-height: 1.2;
   }
   .add-btn {
     gap: 6px;
+    min-width: 0;
+    padding-inline: 4px;
+  }
+  .product-card__buttons {
+    min-width: 0;
+    gap: 6px;
   }
   .wish-btn {
-    width: 44px;
+    width: 40px;
+    flex: 0 0 40px;
   }
 }
